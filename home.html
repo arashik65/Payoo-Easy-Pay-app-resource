@@ -32,7 +32,7 @@
                <img src="assets/logo.png" alt="">
             </div>
             <div class="balance-info">
-                <h2 class="text-2xl font bold">$ <span id="blance">45000</span> </h2>
+                <h2 class="text-2xl font bold">$ <span id="balance">45000</span> </h2>
                 <p class="text-neutral/50">Available Balance</p>
             </div>
 
@@ -76,9 +76,52 @@
              </button>
         </div>
     </section>
+  
+<!-- add money section -->
+    <section class="add-money" class="w-11/12 mx-auto py-5 ">
+        <h2 class="text-xl font-bold mb-5">Add Money</h2>
+
+         <div class="card bg-base-100 w-full shadow  rouded-2xl ">
+      <div class="card-body">
+   <label class="label text-neutral font-bold">Select Bank</label>      
+  <select id="add-money-bank" class="select w-full bg-base-200 rounded-full">
+        <option disabled selected>select a Bank</option>
+         <option value="DBBL">DBBL</option>
+        <option value="IBBL">IBBL</option>
+       <option value="CITY">City Bank</option>
+  </select>
+  <br>
+        <fieldset class="fieldset">
+          <label class="label text-neutral font-bold">Bank Account Number</label>
+          <input id="add-money-number" maxlength="11" minlength="11" type="text" class="input rounded-full bg-base-200 w-full"
+           value="01947619298" placeholder="Enter Bank 11 digit Number" />
+
+          <br>
+
+          <label class="label text-neutral font-bold">Amount to Add</label>
+          <input id="add-money-amount" type="number" class="input rounded-full bg-base-200 w-full"
+            placeholder="Enter Amount to Add" />
+
+          <br>
+
+          <label class="label text-neutral font-bold">4 Digit Pin</label>
+          <input id="add-money-pin" type="password " maxlength="4" class="input rounded-full bg-base-200 w-full" placeholder="Enter 4 Digit Pin" />
+          <button id="add-money-btn" class="btn btn-primary mt-4 rounded-full">Add Money</button>
+        </fieldset>
 
 
-  <section id="cashout" class="w-11/12 mx-auto py-5 ">
+         <!-- machine js file linked -->
+         <script src="script/machine.js"></script>
+        <!-- cashout file js linked -->
+        <script src="script/cashout.js"></script>
+      </div>
+    </div>
+
+    </section>
+
+
+<!-- cashout section -->
+  <section id="cashout" class="w-11/12 mx-auto py-5 hidden">
          <h2 class="text-xl font-bold mb-5">cashout</h2>
 
     <div class="card bg-base-100 w-full shadow  rouded-2xl ">
