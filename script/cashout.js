@@ -35,12 +35,18 @@ document.getElementById('cashout-btn').addEventListener('click', function(){
     //3- new div innerHTML add korbo
     newHistory.innerHTML=`
        <div class="transaction-card p-5 bg-base-100">
-         Cashout ${cashoutAmmount} TAKA success to  ${cashoutNumber} ,  at ${new Date ()}    
+         Cashout Success from tk- ${cashoutAmmount}, Number is  ${cashoutNumber} ,  at ${new Date ()}    
        </div>
     `;
     //4- history container a newDiv append korbo
     history.append(newHistory);
    
+  }
+  
+   else{
+    //5-2 false:: show an error alert > return 
+    alert('invalid pin');
+    return;
   }
 
 });
